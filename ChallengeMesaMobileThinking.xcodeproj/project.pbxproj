@@ -15,6 +15,9 @@
 		F1474F9F25E45D6F00DB5977 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1474F9D25E45D6F00DB5977 /* LaunchScreen.storyboard */; };
 		F1474FAA25E45D6F00DB5977 /* ChallengeMesaMobileThinkingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1474FA925E45D6F00DB5977 /* ChallengeMesaMobileThinkingTests.swift */; };
 		F1474FB525E45D6F00DB5977 /* ChallengeMesaMobileThinkingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1474FB425E45D6F00DB5977 /* ChallengeMesaMobileThinkingUITests.swift */; };
+		F1474FD425E4616A00DB5977 /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1474FD325E4616A00DB5977 /* AuthenticationService.swift */; };
+		F1474FDC25E4621600DB5977 /* URLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1474FDB25E4621600DB5977 /* URLs.swift */; };
+		F1474FE125E4773600DB5977 /* APIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1474FE025E4773600DB5977 /* APIResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		F1474FB025E45D6F00DB5977 /* ChallengeMesaMobileThinkingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChallengeMesaMobileThinkingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1474FB425E45D6F00DB5977 /* ChallengeMesaMobileThinkingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeMesaMobileThinkingUITests.swift; sourceTree = "<group>"; };
 		F1474FB625E45D6F00DB5977 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F1474FD325E4616A00DB5977 /* AuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
+		F1474FDB25E4621600DB5977 /* URLs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLs.swift; sourceTree = "<group>"; };
+		F1474FE025E4773600DB5977 /* APIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,12 +105,12 @@
 		F1474F9125E45D6D00DB5977 /* ChallengeMesaMobileThinking */ = {
 			isa = PBXGroup;
 			children = (
-				F1474F9225E45D6D00DB5977 /* AppDelegate.swift */,
-				F1474F9425E45D6D00DB5977 /* SceneDelegate.swift */,
-				F1474F9625E45D6D00DB5977 /* ViewController.swift */,
-				F1474F9825E45D6D00DB5977 /* Main.storyboard */,
+				F1474FCE25E45F1900DB5977 /* App */,
+				F1474FC525E45EDD00DB5977 /* Model */,
+				F1474FC725E45EF200DB5977 /* ModelView */,
+				F1474FD225E4611200DB5977 /* Services */,
+				F1474FC625E45EE500DB5977 /* View */,
 				F1474F9B25E45D6F00DB5977 /* Assets.xcassets */,
-				F1474F9D25E45D6F00DB5977 /* LaunchScreen.storyboard */,
 				F1474FA025E45D6F00DB5977 /* Info.plist */,
 			);
 			path = ChallengeMesaMobileThinking;
@@ -126,6 +132,49 @@
 				F1474FB625E45D6F00DB5977 /* Info.plist */,
 			);
 			path = ChallengeMesaMobileThinkingUITests;
+			sourceTree = "<group>";
+		};
+		F1474FC525E45EDD00DB5977 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F1474FE025E4773600DB5977 /* APIResponse.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F1474FC625E45EE500DB5977 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F1474F9825E45D6D00DB5977 /* Main.storyboard */,
+				F1474F9D25E45D6F00DB5977 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F1474FC725E45EF200DB5977 /* ModelView */ = {
+			isa = PBXGroup;
+			children = (
+				F1474F9625E45D6D00DB5977 /* ViewController.swift */,
+			);
+			path = ModelView;
+			sourceTree = "<group>";
+		};
+		F1474FCE25E45F1900DB5977 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				F1474F9225E45D6D00DB5977 /* AppDelegate.swift */,
+				F1474F9425E45D6D00DB5977 /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		F1474FD225E4611200DB5977 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				F1474FD325E4616A00DB5977 /* AuthenticationService.swift */,
+				F1474FDB25E4621600DB5977 /* URLs.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,9 +307,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1474FDC25E4621600DB5977 /* URLs.swift in Sources */,
 				F1474F9725E45D6D00DB5977 /* ViewController.swift in Sources */,
 				F1474F9325E45D6D00DB5977 /* AppDelegate.swift in Sources */,
 				F1474F9525E45D6D00DB5977 /* SceneDelegate.swift in Sources */,
+				F1474FD425E4616A00DB5977 /* AuthenticationService.swift in Sources */,
+				F1474FE125E4773600DB5977 /* APIResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
