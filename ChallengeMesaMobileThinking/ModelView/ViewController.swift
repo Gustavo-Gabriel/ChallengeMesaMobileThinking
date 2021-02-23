@@ -12,21 +12,27 @@ class ViewController: UIViewController {
     var auth = AuthenticationService()
     var userDataLogin: [String: String] = [:]
     
+    @IBOutlet weak var txtEmail: UITextField!
+    @IBOutlet weak var txtPassword: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        txtEmail.delegate = self
+        txtPassword.delegate = self
     }
     
     
-    @IBAction func entrar(_ sender: Any) {
-        auth.signin(email: "john@doe.com", password: "12345") { (headerAccess) in
-            DispatchQueue.main.async {
-                self.userDataLogin = headerAccess
-                
-                print(self.userDataLogin["token"] ?? "Credencias Incorretas" )
-            }
-        }
-    }
+//    @IBAction func entrar(_ sender: Any) {
+//        auth.signin(email: "john@doe.com", password: "123456") { (headerAccess) in
+//            DispatchQueue.main.async {
+//                self.userDataLogin = headerAccess
+//
+//                print(self.userDataLogin["token"] ?? "Credencias Incorretas" )
+//            }
+//        }
+//    }
     
 }
 

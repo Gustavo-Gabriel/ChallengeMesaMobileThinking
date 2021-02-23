@@ -10,7 +10,6 @@ import Foundation
 class AuthenticationService {
     
     var session: URLSession!
-    public let url = URL(string: "https://mesa-news-api.herokuapp.com/v1/client/auth/signin")!
     
     init() {
         self.session = URLSession.shared
@@ -20,7 +19,7 @@ class AuthenticationService {
         
         let userDict: [String : String] = ["email" : email, "password" : password]
         
-        var request = URLRequest(url: self.url)
+        var request = URLRequest(url: URL(string: urlSignin)!)
         request.setValue("application/json", forHTTPHeaderField: "Content-type")
         request.httpMethod = "POST"
         
