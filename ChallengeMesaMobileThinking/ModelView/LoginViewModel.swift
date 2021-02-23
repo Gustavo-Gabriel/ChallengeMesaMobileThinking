@@ -24,21 +24,7 @@ class LoginViewModel: UIViewController {
     }
     
     
-    @IBAction func loginUser(_ sender: Any) {
-        auth.signin(email: txtEmail.text!, password: txtPassword.text!) { (headerAccess) in
-            
-            DispatchQueue.main.async {
-                self.userDataLogin = headerAccess
-                
-                if self.userDataLogin == [:]{
-                    print("Credencias Erradas")
-                }else {
-                    self.screenChangeLoginFeed()
-                }
-            }
-            
-        }
-    }
+    
     //    @IBAction func entrar(_ sender: Any) {
 //        auth.signin(email: "john@doe.com", password: "123456") { (headerAccess) in
 //            DispatchQueue.main.async {

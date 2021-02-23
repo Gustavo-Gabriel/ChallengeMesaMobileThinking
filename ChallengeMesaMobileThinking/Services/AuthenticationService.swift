@@ -9,42 +9,30 @@ import Foundation
 
 class AuthenticationService {
     
-    var session: URLSession!
-    
-    init() {
-        self.session = URLSession.shared
-    }
-    
-    func signin(email: String, password: String, completion: @escaping ([String : String]) -> Void) {
-        
-        let userDict: [String : String] = ["email" : email, "password" : password]
-        
-        var request = URLRequest(url: URL(string: urlSignin)!)
-        request.setValue("application/json", forHTTPHeaderField: "Content-type")
-        request.httpMethod = "POST"
-        
-        guard let json = try? JSONEncoder().encode(userDict) else { return }
-        
-        let uploadTask = URLSession.shared.uploadTask(with: request, from: json) {(data, response, error) in
+    func post(endPoint: API, completion: @escaping (Result<String, NetworkError>) -> Void) {
             
-            if let _ = error {
-                completion([:])
-            }
+            guard let url = URL(string: endPoint.path) else { return }
+            var request = URLRequest(url: url)
+            request.httpMethod = endPoint.httpMethod
+            request.httpBody = endPoint.httpBody
+            request.addValue("application/json", forHTTPHeaderField: "Content-Type")
             
-            if let httpResponse = response as? HTTPURLResponse {
-                
-                if (200...299).contains(httpResponse.statusCode) {
-                
-                    let result = try? JSONDecoder().decode(APIResponse.self, from: data!)
-                    completion(["token" : result!.token])
-                    
-                } else {
-                    completion([:])
+            URLSession.shared.dataTask(with: request) { data, _, error in
+                guard let data = data, error == nil else {
+                    completion(.failure(.urlError))
                     return
                 }
-            }
+                
+                let result = try? JSONDecoder().decode(APIResponse.self, from: data)
+                if let result = result {
+                    DispatchQueue.main.async {
+                        completion(.success(result.token))
+                    }
+                } else {
+                    completion(.failure(.decondingError))
+                }
+                
+            }.resume()
+            
         }
-        
-        uploadTask.resume()
-    }
 }
