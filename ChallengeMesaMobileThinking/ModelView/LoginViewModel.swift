@@ -25,7 +25,7 @@ class LoginViewModel: UIViewController {
     
     
     @IBAction func loginUser(_ sender: Any) {
-        auth.signin(email: "john@doe.com", password: "123456") { (headerAccess) in
+        auth.signin(email: txtEmail.text!, password: txtPassword.text!) { (headerAccess) in
             
             DispatchQueue.main.async {
                 self.userDataLogin = headerAccess
@@ -33,10 +33,7 @@ class LoginViewModel: UIViewController {
                 if self.userDataLogin == [:]{
                     print("Credencias Erradas")
                 }else {
-                    let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                    let secondVC = storyboard.instantiateViewController(identifier: "FeedView")
-                    secondVC.modalPresentationStyle = .fullScreen                    
-                    self.present(secondVC, animated: true, completion: nil)
+                    self.screenChangeLoginFeed()
                 }
             }
             

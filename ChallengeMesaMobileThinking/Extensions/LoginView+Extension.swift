@@ -22,5 +22,12 @@ extension LoginViewModel: UITextFieldDelegate {
         return true
     }
     
+    func screenChangeLoginFeed(){
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let secondVC = storyboard.instantiateViewController(identifier: "FeedView")
+        secondVC.modalPresentationStyle = .fullScreen
+        present(secondVC, animated: true, completion: nil)
+    }
+    
 }
 
