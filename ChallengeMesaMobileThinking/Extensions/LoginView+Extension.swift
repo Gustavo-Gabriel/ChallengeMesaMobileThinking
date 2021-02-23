@@ -7,7 +7,7 @@
 
 import UIKit
 
-extension ViewController: UITextFieldDelegate {
+extension LoginViewModel: UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         
