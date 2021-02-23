@@ -20,6 +20,7 @@
 		F1474FE125E4773600DB5977 /* APIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1474FE025E4773600DB5977 /* APIResponse.swift */; };
 		F1474FE725E4BA0E00DB5977 /* LoginView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1474FE625E4BA0E00DB5977 /* LoginView+Extension.swift */; };
 		F147503225E4C0D000DB5977 /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F147503125E4C0D000DB5977 /* FeedViewModel.swift */; };
+		F147503F25E52C1400DB5977 /* NewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F147503E25E52C1400DB5977 /* NewsModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		F1474FE025E4773600DB5977 /* APIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResponse.swift; sourceTree = "<group>"; };
 		F1474FE625E4BA0E00DB5977 /* LoginView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginView+Extension.swift"; sourceTree = "<group>"; };
 		F147503125E4C0D000DB5977 /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
+		F147503E25E52C1400DB5977 /* NewsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				F1474FE025E4773600DB5977 /* APIResponse.swift */,
+				F147503E25E52C1400DB5977 /* NewsModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -324,6 +327,7 @@
 				F1474FDC25E4621600DB5977 /* URLs.swift in Sources */,
 				F1474F9725E45D6D00DB5977 /* LoginViewModel.swift in Sources */,
 				F1474F9325E45D6D00DB5977 /* AppDelegate.swift in Sources */,
+				F147503F25E52C1400DB5977 /* NewsModel.swift in Sources */,
 				F1474FE725E4BA0E00DB5977 /* LoginView+Extension.swift in Sources */,
 				F1474F9525E45D6D00DB5977 /* SceneDelegate.swift in Sources */,
 				F1474FD425E4616A00DB5977 /* AuthenticationService.swift in Sources */,
