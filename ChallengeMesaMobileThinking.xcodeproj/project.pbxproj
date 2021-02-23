@@ -19,6 +19,7 @@
 		F1474FDC25E4621600DB5977 /* URLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1474FDB25E4621600DB5977 /* URLs.swift */; };
 		F1474FE125E4773600DB5977 /* APIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1474FE025E4773600DB5977 /* APIResponse.swift */; };
 		F1474FE725E4BA0E00DB5977 /* LoginView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1474FE625E4BA0E00DB5977 /* LoginView+Extension.swift */; };
+		F147503225E4C0D000DB5977 /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F147503125E4C0D000DB5977 /* FeedViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		F1474FDB25E4621600DB5977 /* URLs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLs.swift; sourceTree = "<group>"; };
 		F1474FE025E4773600DB5977 /* APIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResponse.swift; sourceTree = "<group>"; };
 		F1474FE625E4BA0E00DB5977 /* LoginView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginView+Extension.swift"; sourceTree = "<group>"; };
+		F147503125E4C0D000DB5977 /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				F1474F9625E45D6D00DB5977 /* LoginViewModel.swift */,
+				F147503125E4C0D000DB5977 /* FeedViewModel.swift */,
 			);
 			path = ModelView;
 			sourceTree = "<group>";
@@ -324,6 +327,7 @@
 				F1474FE725E4BA0E00DB5977 /* LoginView+Extension.swift in Sources */,
 				F1474F9525E45D6D00DB5977 /* SceneDelegate.swift in Sources */,
 				F1474FD425E4616A00DB5977 /* AuthenticationService.swift in Sources */,
+				F147503225E4C0D000DB5977 /* FeedViewModel.swift in Sources */,
 				F1474FE125E4773600DB5977 /* APIResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

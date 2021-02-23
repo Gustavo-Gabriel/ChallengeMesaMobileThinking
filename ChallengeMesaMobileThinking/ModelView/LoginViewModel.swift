@@ -24,7 +24,25 @@ class LoginViewModel: UIViewController {
     }
     
     
-//    @IBAction func entrar(_ sender: Any) {
+    @IBAction func loginUser(_ sender: Any) {
+        auth.signin(email: "john@doe.com", password: "123456") { (headerAccess) in
+            
+            DispatchQueue.main.async {
+                self.userDataLogin = headerAccess
+                
+                if self.userDataLogin == [:]{
+                    print("Credencias Erradas")
+                }else {
+                    let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                    let secondVC = storyboard.instantiateViewController(identifier: "FeedView")
+                    secondVC.modalPresentationStyle = .fullScreen                    
+                    self.present(secondVC, animated: true, completion: nil)
+                }
+            }
+            
+        }
+    }
+    //    @IBAction func entrar(_ sender: Any) {
 //        auth.signin(email: "john@doe.com", password: "123456") { (headerAccess) in
 //            DispatchQueue.main.async {
 //                self.userDataLogin = headerAccess
