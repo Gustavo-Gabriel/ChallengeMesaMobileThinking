@@ -9,30 +9,31 @@ import Foundation
 
 class AuthenticationService {
     
-    func post(endPoint: API, completion: @escaping (Result<String, NetworkError>) -> Void) {
+    func postSignin(endPoint: API, completion: @escaping (Result<String, NetworkError>) -> Void) {
+        
+        guard let url = URL(string: endPoint.path) else { return }
+        var request = URLRequest(url: url)
+        request.httpMethod = endPoint.httpMethod
+        request.httpBody = endPoint.httpBody
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        
+        URLSession.shared.dataTask(with: request) { data, _, error in
+            guard let data = data, error == nil else {
+                completion(.failure(.urlError))
+                return
+            }
             
-            guard let url = URL(string: endPoint.path) else { return }
-            var request = URLRequest(url: url)
-            request.httpMethod = endPoint.httpMethod
-            request.httpBody = endPoint.httpBody
-            request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+            let result = try? JSONDecoder().decode(APIResponse.self, from: data)
             
-            URLSession.shared.dataTask(with: request) { data, _, error in
-                guard let data = data, error == nil else {
-                    completion(.failure(.urlError))
-                    return
+            if let result = result {
+                DispatchQueue.main.async {
+                    completion(.success(result.token))
                 }
-                
-                let result = try? JSONDecoder().decode(APIResponse.self, from: data)
-                if let result = result {
-                    DispatchQueue.main.async {
-                        completion(.success(result.token))
-                    }
-                } else {
-                    completion(.failure(.decondingError))
-                }
-                
-            }.resume()
+            } else {
+                completion(.failure(.decondingError))
+            }
             
-        }
+        }.resume()
+        
+    }
 }

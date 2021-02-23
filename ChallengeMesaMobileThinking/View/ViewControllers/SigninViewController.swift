@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LoginViewModel: UIViewController {
+class SigninViewController: UIViewController {
     
     var auth = AuthenticationService()
     var userDataLogin: [String: String] = [:]
