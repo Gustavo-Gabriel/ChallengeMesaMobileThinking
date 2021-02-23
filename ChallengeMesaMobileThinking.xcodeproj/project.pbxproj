@@ -21,6 +21,10 @@
 		F1474FE725E4BA0E00DB5977 /* LoginView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1474FE625E4BA0E00DB5977 /* LoginView+Extension.swift */; };
 		F147503225E4C0D000DB5977 /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F147503125E4C0D000DB5977 /* FeedViewModel.swift */; };
 		F147503F25E52C1400DB5977 /* NewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F147503E25E52C1400DB5977 /* NewsModel.swift */; };
+		F147504425E5316700DB5977 /* NewsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F147504325E5316700DB5977 /* NewsService.swift */; };
+		F147504925E5338100DB5977 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = F147504825E5338100DB5977 /* API.swift */; };
+		F147505125E533E600DB5977 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F147505025E533E600DB5977 /* UserModel.swift */; };
+		F147505625E5346600DB5977 /* CredentialsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F147505525E5346600DB5977 /* CredentialsModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +65,10 @@
 		F1474FE625E4BA0E00DB5977 /* LoginView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginView+Extension.swift"; sourceTree = "<group>"; };
 		F147503125E4C0D000DB5977 /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
 		F147503E25E52C1400DB5977 /* NewsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsModel.swift; sourceTree = "<group>"; };
+		F147504325E5316700DB5977 /* NewsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsService.swift; sourceTree = "<group>"; };
+		F147504825E5338100DB5977 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		F147505025E533E600DB5977 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		F147505525E5346600DB5977 /* CredentialsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialsModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +154,8 @@
 			children = (
 				F1474FE025E4773600DB5977 /* APIResponse.swift */,
 				F147503E25E52C1400DB5977 /* NewsModel.swift */,
+				F147505025E533E600DB5977 /* UserModel.swift */,
+				F147505525E5346600DB5977 /* CredentialsModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -180,8 +190,10 @@
 		F1474FD225E4611200DB5977 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				F147504825E5338100DB5977 /* API.swift */,
 				F1474FD325E4616A00DB5977 /* AuthenticationService.swift */,
 				F1474FDB25E4621600DB5977 /* URLs.swift */,
+				F147504325E5316700DB5977 /* NewsService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -324,7 +336,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F147504925E5338100DB5977 /* API.swift in Sources */,
+				F147504425E5316700DB5977 /* NewsService.swift in Sources */,
 				F1474FDC25E4621600DB5977 /* URLs.swift in Sources */,
+				F147505625E5346600DB5977 /* CredentialsModel.swift in Sources */,
 				F1474F9725E45D6D00DB5977 /* LoginViewModel.swift in Sources */,
 				F1474F9325E45D6D00DB5977 /* AppDelegate.swift in Sources */,
 				F147503F25E52C1400DB5977 /* NewsModel.swift in Sources */,
@@ -332,6 +347,7 @@
 				F1474F9525E45D6D00DB5977 /* SceneDelegate.swift in Sources */,
 				F1474FD425E4616A00DB5977 /* AuthenticationService.swift in Sources */,
 				F147503225E4C0D000DB5977 /* FeedViewModel.swift in Sources */,
+				F147505125E533E600DB5977 /* UserModel.swift in Sources */,
 				F1474FE125E4773600DB5977 /* APIResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

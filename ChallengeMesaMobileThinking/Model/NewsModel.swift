@@ -7,11 +7,15 @@
 
 import Foundation
 
-struct NewsList: Codable {
+class NewsList: Codable {
     var data: [News]
+    
+    init(data: [News]) {
+        self.data = data
+    }
 }
 
-struct News: Codable {
+class News: Codable {
     var title: String
     var description: String
     var content: String
@@ -20,4 +24,17 @@ struct News: Codable {
     var highlight: Bool
     var url: String
     var image_url: String
+    
+    init(title: String, description: String, content: String, author: String, published_at: String, highlight: Bool, url: String, image_url: String) {
+        
+        self.title = title
+        self.description = description
+        self.content = content
+        self.author = author
+        self.published_at = published_at
+        self.highlight = highlight
+        self.url = url
+        self.image_url = image_url
+        
+    }
 }
