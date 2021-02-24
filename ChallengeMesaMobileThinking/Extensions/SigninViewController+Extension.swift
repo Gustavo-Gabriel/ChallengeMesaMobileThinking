@@ -24,15 +24,19 @@ extension SigninViewController: UITextFieldDelegate {
 }
 
 extension SigninViewController: StatusRequestDelegate {
+    
     func requestSucceeded() {
         if let token = singinViewModel.token {
             performSegue(withIdentifier: "segueLoginFromFeed", sender: token)
         } else {
-            print("Error")
+            DispatchQueue.main.async(execute: {
+                self.showAlert(title: "Error", message: "Try again later")
+             })
         }
     }
+    
     func requestFailed() {
-        print("Error")
+        showAlert(title: "Error", message: "Try again later")
     }
 }
 

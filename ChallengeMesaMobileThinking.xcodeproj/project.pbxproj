@@ -28,6 +28,7 @@
 		F14750AA25E5843700DB5977 /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14750A925E5843700DB5977 /* FeedViewModel.swift */; };
 		F1675E0525E6E4C800DEC1E8 /* StatusRequestDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1675E0425E6E4C800DEC1E8 /* StatusRequestDelegate.swift */; };
 		F1675E0D25E6E4FD00DEC1E8 /* AuthenticationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1675E0C25E6E4FD00DEC1E8 /* AuthenticationProtocol.swift */; };
+		F1675E1225E6F6D800DEC1E8 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1675E1125E6F6D800DEC1E8 /* UIViewController+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		F14750A925E5843700DB5977 /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
 		F1675E0425E6E4C800DEC1E8 /* StatusRequestDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusRequestDelegate.swift; sourceTree = "<group>"; };
 		F1675E0C25E6E4FD00DEC1E8 /* AuthenticationProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationProtocol.swift; sourceTree = "<group>"; };
+		F1675E1125E6F6D800DEC1E8 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,6 +211,7 @@
 			isa = PBXGroup;
 			children = (
 				F1474FE625E4BA0E00DB5977 /* SigninViewController+Extension.swift */,
+				F1675E1125E6F6D800DEC1E8 /* UIViewController+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -365,6 +368,7 @@
 				F14750A525E5842A00DB5977 /* SigninViewModel.swift in Sources */,
 				F147504425E5316700DB5977 /* NewsService.swift in Sources */,
 				F147505625E5346600DB5977 /* CredentialsModel.swift in Sources */,
+				F1675E1225E6F6D800DEC1E8 /* UIViewController+Extension.swift in Sources */,
 				F1474F9725E45D6D00DB5977 /* SigninViewController.swift in Sources */,
 				F147508A25E581C400DB5977 /* UserModel.swift in Sources */,
 				F1474F9325E45D6D00DB5977 /* AppDelegate.swift in Sources */,

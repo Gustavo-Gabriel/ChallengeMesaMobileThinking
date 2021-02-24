@@ -35,6 +35,5 @@ class News: Codable {
         self.highlight = highlight
         self.url = url
         self.image_url = image_url
-        
     }
 }
