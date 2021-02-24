@@ -13,7 +13,6 @@ class SigninViewController: UIViewController {
     @IBOutlet weak var txtEmail: UITextField!
     @IBOutlet weak var txtPassword: UITextField!
     
-    var signinVM = SigninViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,11 +28,7 @@ class SigninViewController: UIViewController {
     }
     
     @IBAction func login(_ sender: UIButton) {
-        signinVM.email = txtEmail.text
-        signinVM.password = txtPassword.text
         
-    signinVM.signin()
-        screenChangeLoginFeed()
     }
     
 }
