@@ -13,6 +13,11 @@ class SigninViewController: UIViewController {
     @IBOutlet weak var txtEmail: UITextField!
     @IBOutlet weak var txtPassword: UITextField!
     
+    lazy var singinViewModel: SigninViewModel = {
+        let viewModel = SigninViewModel(delegate: self)
+        return viewModel
+    }()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,9 +32,19 @@ class SigninViewController: UIViewController {
         txtPassword.delegate = self
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "segueLoginFromFeed" {
+            if let feedViewController = segue.destination as? FeedViewController {
+                feedViewController.token = sender as? String
+            }
+        }
+    }
+    
     @IBAction func login(_ sender: UIButton) {
+        singinViewModel.email = txtEmail.text
+        singinViewModel.password = txtPassword.text
         
+        singinViewModel.signin()
     }
     
 }
-

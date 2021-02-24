@@ -21,13 +21,18 @@ extension SigninViewController: UITextFieldDelegate {
         
         return true
     }
-    
-    func screenChangeLoginFeed(){
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let secondVC = storyboard.instantiateViewController(identifier: "FeedView")
-        secondVC.modalPresentationStyle = .fullScreen
-        present(secondVC, animated: true, completion: nil)
-        
+}
+
+extension SigninViewController: StatusRequestDelegate {
+    func requestSucceeded() {
+        if let token = singinViewModel.token {
+            performSegue(withIdentifier: "segueLoginFromFeed", sender: token)
+        } else {
+            print("Error")
+        }
+    }
+    func requestFailed() {
+        print("Error")
     }
 }
 

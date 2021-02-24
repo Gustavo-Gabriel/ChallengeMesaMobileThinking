@@ -60,11 +60,12 @@
                     <connections>
                         <outlet property="txtEmail" destination="2fk-ff-Wbc" id="B4H-OC-yHn"/>
                         <outlet property="txtPassword" destination="w23-d5-5bt" id="H49-8u-06p"/>
+                        <segue destination="72e-9p-age" kind="presentation" identifier="segueLoginFromFeed" modalPresentationStyle="fullScreen" id="qRC-4S-ySc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3310" y="88"/>
+            <point key="canvasLocation" x="-3307" y="88"/>
         </scene>
         <!--Feed View Controller-->
         <scene sceneID="RvQ-7D-dHK">
@@ -74,9 +75,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Teste" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LA3-lb-Tak">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Teste" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LA3-lb-Tak">
                                 <rect key="frame" x="186" y="460" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -84,7 +84,12 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="uu0-Z0-gtu"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="LA3-lb-Tak" firstAttribute="top" secondItem="uu0-Z0-gtu" secondAttribute="top" constant="416" id="2f7-rH-VON"/>
+                            <constraint firstItem="LA3-lb-Tak" firstAttribute="centerX" secondItem="9gI-dV-ClZ" secondAttribute="centerX" id="BM2-wz-SFH"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="p9i-t9-eXD"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5m0-Rs-tBO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
