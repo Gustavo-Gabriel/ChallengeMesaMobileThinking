@@ -24,8 +24,8 @@
 		F147504925E5338100DB5977 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = F147504825E5338100DB5977 /* API.swift */; };
 		F147505625E5346600DB5977 /* CredentialsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F147505525E5346600DB5977 /* CredentialsModel.swift */; };
 		F147508A25E581C400DB5977 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F147508925E581C400DB5977 /* UserModel.swift */; };
-		F14750A525E5842A00DB5977 /* SigninModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14750A425E5842A00DB5977 /* SigninModelView.swift */; };
-		F14750AA25E5843700DB5977 /* FeedModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14750A925E5843700DB5977 /* FeedModelView.swift */; };
+		F14750A525E5842A00DB5977 /* SigninViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14750A425E5842A00DB5977 /* SigninViewModel.swift */; };
+		F14750AA25E5843700DB5977 /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14750A925E5843700DB5977 /* FeedViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,8 +69,8 @@
 		F147504825E5338100DB5977 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		F147505525E5346600DB5977 /* CredentialsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialsModel.swift; sourceTree = "<group>"; };
 		F147508925E581C400DB5977 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
-		F14750A425E5842A00DB5977 /* SigninModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninModelView.swift; sourceTree = "<group>"; };
-		F14750A925E5843700DB5977 /* FeedModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedModelView.swift; sourceTree = "<group>"; };
+		F14750A425E5842A00DB5977 /* SigninViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninViewModel.swift; sourceTree = "<group>"; };
+		F14750A925E5843700DB5977 /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,8 +175,8 @@
 		F1474FC725E45EF200DB5977 /* ModelView */ = {
 			isa = PBXGroup;
 			children = (
-				F14750A425E5842A00DB5977 /* SigninModelView.swift */,
-				F14750A925E5843700DB5977 /* FeedModelView.swift */,
+				F14750A425E5842A00DB5977 /* SigninViewModel.swift */,
+				F14750A925E5843700DB5977 /* FeedViewModel.swift */,
 			);
 			path = ModelView;
 			sourceTree = "<group>";
@@ -348,7 +348,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F147504925E5338100DB5977 /* API.swift in Sources */,
-				F14750A525E5842A00DB5977 /* SigninModelView.swift in Sources */,
+				F14750A525E5842A00DB5977 /* SigninViewModel.swift in Sources */,
 				F147504425E5316700DB5977 /* NewsService.swift in Sources */,
 				F147505625E5346600DB5977 /* CredentialsModel.swift in Sources */,
 				F1474F9725E45D6D00DB5977 /* SigninViewController.swift in Sources */,
@@ -359,7 +359,7 @@
 				F1474F9525E45D6D00DB5977 /* SceneDelegate.swift in Sources */,
 				F1474FD425E4616A00DB5977 /* AuthenticationService.swift in Sources */,
 				F147503225E4C0D000DB5977 /* FeedViewController.swift in Sources */,
-				F14750AA25E5843700DB5977 /* FeedModelView.swift in Sources */,
+				F14750AA25E5843700DB5977 /* FeedViewModel.swift in Sources */,
 				F1474FE125E4773600DB5977 /* APIResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
